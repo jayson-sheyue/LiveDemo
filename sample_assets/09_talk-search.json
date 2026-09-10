@@ -1,0 +1,18 @@
+{
+  "id": "talk-search",
+  "title": "功能 · Google 搜索",
+  "group": "先这样开口",
+  "note": "问一个需要上网的事实问题。这是官方 google_search 接地，不是自定义函数。",
+  "engine": "talk",
+  "expected": "（根据网页简短回答）",
+  "config": {
+    "voice": "Kore",
+    "language": "",
+    "input_transcript": true,
+    "output_transcript": true,
+    "tools": "search",
+    "barge_in": true,
+    "session_resume": true,
+    "system_instruction": "You are a concise voice assistant. RESPOND IN MANDARIN. YOU MUST RESPOND UNMISTAKABLY IN 普通话。用口语化的短句回答。需要事实时使用 Google 搜索。用一两句口语回答，不要念网址。"
+  }
+}

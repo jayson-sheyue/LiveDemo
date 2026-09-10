@@ -1,0 +1,19 @@
+{
+  "id": "talk-compress",
+  "title": "功能 · 上下文压缩",
+  "group": "先这样开口",
+  "note": "打开摄像头并勾选上下文压缩。无压缩时音视频大约 2 分钟；压缩用滑动窗口裁旧轮次，可把会话拉长。",
+  "engine": "talk",
+  "expected": "（长会话仍能接话）",
+  "config": {
+    "voice": "Kore",
+    "language": "",
+    "input_transcript": true,
+    "output_transcript": true,
+    "video": true,
+    "compress": true,
+    "barge_in": true,
+    "session_resume": true,
+    "system_instruction": "You are a concise voice assistant. RESPOND IN MANDARIN. YOU MUST RESPOND UNMISTAKABLY IN 普通话。用口语化的短句回答。"
+  }
+}

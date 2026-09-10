@@ -1,0 +1,16 @@
+{
+  "id": "say-video",
+  "title": "功能 · 看见图",
+  "group": "先听它说",
+  "note": "勾选摄像头。打字页没有麦克风，所以没有打断。会话开着按约 1 帧/秒推 JPEG，不是一张静图。模型不回传画面。",
+  "engine": "textturn",
+  "expected": "（根据画面用普通话短说一句）",
+  "config": {
+    "voice": "Kore",
+    "language": "",
+    "video": true,
+    "output_transcript": true,
+    "text": "请根据画面，用一句话描述你看见了什么。",
+    "system_instruction": "You are a concise voice assistant. RESPOND IN MANDARIN. YOU MUST RESPOND UNMISTAKABLY IN 普通话。用口语化的短句回答。根据画面描述，不要编造摄像头里没有的东西。"
+  }
+}

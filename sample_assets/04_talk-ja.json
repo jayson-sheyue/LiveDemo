@@ -1,0 +1,15 @@
+{
+  "id": "talk-ja",
+  "title": "对照 · 日本語",
+  "group": "先这样开口",
+  "note": "官方语言表有 ja-JP。可以同时在系统指令里再钉一次日语。",
+  "engine": "talk",
+  "expected": "こんにちは。",
+  "config": {
+    "voice": "Aoede",
+    "language": "ja-JP",
+    "input_transcript": true,
+    "output_transcript": true,
+    "system_instruction": "You are a concise voice assistant. RESPOND IN JAPANESE. YOU MUST RESPOND UNMISTAKABLY IN 日本語。短い口語で答えてください。"
+  }
+}

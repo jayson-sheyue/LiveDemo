@@ -1,0 +1,19 @@
+{
+  "id": "talk-pip",
+  "title": "功能 · 画中画",
+  "group": "先这样开口",
+  "note": "同时打开摄像头和屏幕。官方只有一条 JPEG 流，Demo 把两路合成一张：屏幕是底图，摄像头在右下角小窗，仍是 1 帧/秒。",
+  "engine": "talk",
+  "expected": "屏幕上是……角落里是我。",
+  "config": {
+    "voice": "Kore",
+    "language": "",
+    "input_transcript": true,
+    "output_transcript": true,
+    "video": true,
+    "screen": true,
+    "barge_in": true,
+    "session_resume": true,
+    "system_instruction": "You are a concise voice assistant. RESPOND IN MANDARIN. YOU MUST RESPOND UNMISTAKABLY IN 普通话。用口语化的短句回答。画面是画中画：大图是屏幕，右下角小窗是摄像头。分别用短句说明两边看见什么。"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "talk-screen",
+  "title": "功能 · 屏幕共享",
+  "group": "先这样开口",
+  "note": "勾选共享屏幕。同样是 JPEG 1 帧/秒，不是双向投屏。若同时打开摄像头，会合成一张画中画（屏幕大图、摄像头小窗）再发出去。",
+  "engine": "talk",
+  "expected": "屏幕上是……",
+  "config": {
+    "voice": "Kore",
+    "language": "",
+    "input_transcript": true,
+    "output_transcript": true,
+    "screen": true,
+    "barge_in": true,
+    "session_resume": true,
+    "system_instruction": "You are a concise voice assistant. RESPOND IN MANDARIN. YOU MUST RESPOND UNMISTAKABLY IN 普通话。用口语化的短句回答。根据共享屏幕，用一两句普通话描述你看见的内容。"
+  }
+}

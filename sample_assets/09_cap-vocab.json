@@ -1,0 +1,12 @@
+{
+  "id": "cap-vocab",
+  "title": "功能 · 自定义词表",
+  "group": "对着麦说",
+  "note": "词表只放专有名词。对着麦说项目代号 webeye-internal-test。",
+  "engine": "transcribe",
+  "expected": "请说：项目代号 webeye-internal-test。",
+  "config": {
+    "language": "cmn-Hans-CN",
+    "vocabulary": "webeye-internal-test"
+  }
+}

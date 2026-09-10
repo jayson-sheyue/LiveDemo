@@ -1,0 +1,11 @@
+{
+  "id": "cap-en",
+  "title": "对照 · English",
+  "group": "对着麦说",
+  "note": "同一条 Live 听写，换 locale。这不是 Chirp 3。",
+  "engine": "transcribe",
+  "expected": "Speak English into the mic.",
+  "config": {
+    "language": "en-US"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "talk-video",
+  "title": "功能 · 摄像头",
+  "group": "先这样开口",
+  "note": "勾选打开摄像头。官方把视频当成 JPEG，最多 1 帧/秒。无压缩时音视频会话大约 2 分钟。模型不会回传画面，只会看着说。",
+  "engine": "talk",
+  "expected": "我看见……",
+  "config": {
+    "voice": "Kore",
+    "language": "",
+    "input_transcript": true,
+    "output_transcript": true,
+    "video": true,
+    "barge_in": true,
+    "system_instruction": "You are a concise voice assistant. RESPOND IN MANDARIN. YOU MUST RESPOND UNMISTAKABLY IN 普通话。用口语化的短句回答。根据摄像头画面，用一两句普通话描述你看见的东西。"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "say-ja",
+  "title": "对照 · 日本語で",
+  "group": "先听它说",
+  "note": "language_code=ja-JP，系统指令再钉日语。",
+  "engine": "textturn",
+  "expected": "こんにちは。",
+  "config": {
+    "voice": "Aoede",
+    "language": "ja-JP",
+    "text": "日本語で、短く自己紹介してください。",
+    "system_instruction": "You are a concise voice assistant. RESPOND IN JAPANESE. YOU MUST RESPOND UNMISTAKABLY IN 日本語。短い口語で答えてください。",
+    "output_transcript": true
+  }
+}

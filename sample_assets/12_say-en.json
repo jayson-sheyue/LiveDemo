@@ -1,0 +1,15 @@
+{
+  "id": "say-en",
+  "title": "对照 · Say hello",
+  "group": "先听它说",
+  "note": "换英语指令和 Puck。对照中文那条听音色和语言。",
+  "engine": "textturn",
+  "expected": "Hello, I am a voice assistant.",
+  "config": {
+    "voice": "Puck",
+    "language": "en-US",
+    "text": "Introduce yourself in one short spoken sentence.",
+    "system_instruction": "You are a concise voice assistant. Speak English. Keep replies to one or two short spoken sentences.",
+    "output_transcript": true
+  }
+}

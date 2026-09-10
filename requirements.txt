@@ -1,0 +1,4 @@
+fastapi==0.141.1
+uvicorn==0.52.4
+google-genai==2.22.0
+python-socks[asyncio]==2.8.1

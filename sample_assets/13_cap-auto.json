@@ -1,0 +1,11 @@
+{
+  "id": "cap-auto",
+  "title": "功能 · 自动检测语言",
+  "group": "对着麦说",
+  "note": "language_codes 不发送。官方：85+ 语言自动检测，含会话中夹杂。",
+  "engine": "transcribe",
+  "expected": "随便说一种语言，看它是否检测。",
+  "config": {
+    "language": "auto"
+  }
+}

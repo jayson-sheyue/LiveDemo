@@ -1,0 +1,11 @@
+{
+  "id": "cap-cmn",
+  "title": "入门 · 普通话",
+  "group": "对着麦说",
+  "note": "点开始听写，对着麦克风说话。模型是 gemini-3.5-transcribe-live-preview，区域 global。",
+  "engine": "transcribe",
+  "expected": "对着麦克风说普通话。",
+  "config": {
+    "language": "cmn-Hans-CN"
+  }
+}

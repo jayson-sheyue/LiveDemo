@@ -1,0 +1,18 @@
+{
+  "id": "talk-tools",
+  "title": "功能 · 演示函数",
+  "group": "先这样开口",
+  "note": "问「现在几点了」。服务端会执行 get_current_time，再把结果说给你听。不能和 Google 搜索同时开。",
+  "engine": "talk",
+  "expected": "现在是……",
+  "config": {
+    "voice": "Kore",
+    "language": "",
+    "input_transcript": true,
+    "output_transcript": true,
+    "tools": "demo",
+    "barge_in": true,
+    "session_resume": true,
+    "system_instruction": "You are a concise voice assistant. RESPOND IN MANDARIN. YOU MUST RESPOND UNMISTAKABLY IN 普通话。用口语化的短句回答。用户问时间或实验室状态时，必须调用对应工具，再用口语转述结果。"
+  }
+}

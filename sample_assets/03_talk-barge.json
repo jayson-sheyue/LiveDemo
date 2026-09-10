@@ -1,0 +1,16 @@
+{
+  "id": "talk-barge",
+  "title": "功能 · 打断",
+  "group": "先这样开口",
+  "note": "让它开始说话后立刻再开口。服务端 VAD 会发 interrupted，本地播放应停下。戴耳机更不容易把自己的声音当成打断。",
+  "engine": "talk",
+  "expected": "（说一半被打断）",
+  "config": {
+    "voice": "Fenrir",
+    "language": "",
+    "input_transcript": true,
+    "output_transcript": true,
+    "barge_in": true,
+    "system_instruction": "You are a concise voice assistant. RESPOND IN MANDARIN. YOU MUST RESPOND UNMISTAKABLY IN 普通话。用口语化的短句回答。先用两三句比较长的话回答，方便练习打断。"
+  }
+}

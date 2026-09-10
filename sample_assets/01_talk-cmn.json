@@ -1,0 +1,15 @@
+{
+  "id": "talk-cmn",
+  "title": "入门 · 普通话打招呼",
+  "group": "先这样开口",
+  "note": "语言选「不指定」。普通话写在系统指令里，因为 Live SpeechConfig 官方表没有 cmn-Hans-CN。",
+  "engine": "talk",
+  "expected": "你好，我是语音助手。",
+  "config": {
+    "voice": "Kore",
+    "language": "",
+    "input_transcript": true,
+    "output_transcript": true,
+    "system_instruction": "You are a concise voice assistant. RESPOND IN MANDARIN. YOU MUST RESPOND UNMISTAKABLY IN 普通话。用口语化的短句回答。"
+  }
+}

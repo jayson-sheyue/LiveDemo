@@ -1,0 +1,17 @@
+{
+  "id": "say-tools",
+  "title": "功能 · 现在几点",
+  "group": "先听它说",
+  "note": "打字问现在几点。同一条长连接，走演示函数 get_current_time。",
+  "engine": "textturn",
+  "expected": "现在是……",
+  "config": {
+    "voice": "Kore",
+    "language": "",
+    "tools": "demo",
+    "output_transcript": true,
+    "session_resume": true,
+    "text": "现在几点了？请调用工具后用一句话告诉我。",
+    "system_instruction": "You are a concise voice assistant. RESPOND IN MANDARIN. YOU MUST RESPOND UNMISTAKABLY IN 普通话。用口语化的短句回答。用户问时间时必须调用 get_current_time。"
+  }
+}

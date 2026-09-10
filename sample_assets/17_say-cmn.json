@@ -1,0 +1,15 @@
+{
+  "id": "say-cmn",
+  "title": "入门 · 请用普通话自我介绍",
+  "group": "先听它说",
+  "note": "不需要麦克风。仍是 Live 会话，不是 Cloud TTS。系统指令钉普通话。",
+  "engine": "textturn",
+  "expected": "（模型用普通话做一句自我介绍）",
+  "config": {
+    "voice": "Kore",
+    "language": "",
+    "text": "请用一句话介绍你自己，说明你是语音助手。",
+    "system_instruction": "You are a concise voice assistant. RESPOND IN MANDARIN. YOU MUST RESPOND UNMISTAKABLY IN 普通话。用口语化的短句回答。",
+    "output_transcript": true
+  }
+}

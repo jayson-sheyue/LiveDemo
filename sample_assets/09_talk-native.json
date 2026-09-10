@@ -1,0 +1,19 @@
+{
+  "id": "talk-native",
+  "title": "功能 · 情感 / 主动音频",
+  "group": "先这样开口",
+  "note": "Affective Dialog + Proactive Audio 都是 Preview。闲聊或背景声它可能不接话；被明确提问时才开口。官方提示情感模式可能出意外效果。",
+  "engine": "talk",
+  "expected": "（相关话题才接话）",
+  "config": {
+    "voice": "Kore",
+    "language": "",
+    "input_transcript": true,
+    "output_transcript": true,
+    "affective": true,
+    "proactive": true,
+    "barge_in": true,
+    "session_resume": true,
+    "system_instruction": "You are a concise voice assistant. RESPOND IN MANDARIN. YOU MUST RESPOND UNMISTAKABLY IN 普通话。用口语化的短句回答。只有被明确提问时才开口。闲聊、自言自语和背景声保持沉默。"
+  }
+}

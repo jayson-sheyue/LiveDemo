@@ -1,0 +1,25 @@
+{
+  "samples": [
+    "01_talk-cmn.json",
+    "02_talk-en.json",
+    "03_talk-barge.json",
+    "04_talk-ja.json",
+    "05_talk-video.json",
+    "06_talk-screen.json",
+    "07_talk-pip.json",
+    "08_talk-tools.json",
+    "09_talk-search.json",
+    "10_talk-native.json",
+    "11_talk-compress.json",
+    "12_cap-cmn.json",
+    "13_cap-en.json",
+    "14_cap-auto.json",
+    "15_cap-vocab.json",
+    "16_cap-ja.json",
+    "17_say-cmn.json",
+    "18_say-en.json",
+    "19_say-ja.json",
+    "20_say-video.json",
+    "21_say-tools.json"
+  ]
+}

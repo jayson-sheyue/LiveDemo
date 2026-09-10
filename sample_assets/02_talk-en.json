@@ -1,0 +1,15 @@
+{
+  "id": "talk-en",
+  "title": "对照 · English concierge",
+  "group": "先这样开口",
+  "note": "同一套原生音频模型，SpeechConfig.language_code=en-US，系统指令改成英语。",
+  "engine": "talk",
+  "expected": "Hi, how can I help?",
+  "config": {
+    "voice": "Puck",
+    "language": "en-US",
+    "input_transcript": true,
+    "output_transcript": true,
+    "system_instruction": "You are a concise voice assistant. Speak English. Keep replies to one or two short spoken sentences."
+  }
+}

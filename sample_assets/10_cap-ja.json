@@ -1,0 +1,11 @@
+{
+  "id": "cap-ja",
+  "title": "对照 · 日本語",
+  "group": "对着麦说",
+  "note": "ja-JP 在 3.5 Transcribe 语言表是 Supported。",
+  "engine": "transcribe",
+  "expected": "マイクに向かって日本語で話してください。",
+  "config": {
+    "language": "ja-JP"
+  }
+}
