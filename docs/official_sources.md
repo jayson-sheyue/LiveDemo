@@ -11,7 +11,7 @@
 | 官方链接 | 能解决的问题 | 对应项目位置 |
 | --- | --- | --- |
 | [Gemini Live API 概览](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/live-api) | 原生音频会话、和普通 generateContent 的差别 | 对话页；catalog.py |
-| [开始并管理会话](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/live-api/start-manage-session) | Vertex `genai.Client(vertexai=True)`、WSS 端点、10 分钟、goAway、16 kHz 入 / 24 kHz 出、转写字段 | live.py；README |
+| [开始并管理会话](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/live-api/start-manage-session) | 换线约 10 分钟（心跳无效 → 会话恢复）；无压缩纯语音约 15 分钟 / 开画面约 2 分钟（128k → 压缩）；打字页换线仍是 10 分钟、没有单独分钟数；goAway、16/24 kHz | 入门页「能撑多久」总表；各功能页只写本页影响；live.py |
 | [语言与声音](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/live-api/configure-language-voice) | 30 个 `voice_name`；SpeechConfig 语言表（无普通话）；VAD | 对话 / 打字页 |
 | [Live API 参考（打断 / 视频帧率）](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/multimodal-live) | barge-in 默认 `START_OF_ACTIVITY_INTERRUPTS`；视频按 1 FPS 处理 | 对话页打断与摄像头 |
 | [Gemini 3.5 Transcribe](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-transcribe) | `gemini-3.5-transcribe-live-preview`、global、最多约 10 分钟、language_codes、自定义词表；Live 无 diarization | 听写页 |

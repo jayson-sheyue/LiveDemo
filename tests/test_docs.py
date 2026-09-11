@@ -41,6 +41,7 @@ def test_learning_guide_covers_can_and_cannot():
         '会话恢复', '上下文压缩', 'Google 搜索',
         '开了会怎样', '业务价值', '不要用来',
         '网页故意没接', 'RAG',
+        '打字页', '心跳', '能撑多久',
     ):
         assert needle in text, needle
     readme = (Path(__file__).resolve().parents[1] / 'README.md').read_text(encoding='utf-8')

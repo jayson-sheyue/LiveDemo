@@ -15,7 +15,7 @@ from starlette.middleware.trustedhost import TrustedHostMiddleware
 
 from catalog import (
     API_OUT_OF_DEMO, CHECKED, COMPARE_API, COMPARE_METHODS, COMPARE_MODELS, DOCS, ENGINE_LOCATIONS,
-    FEATURE_BLURBS, FEATURE_VALUE, FIT_GUIDE, MODEL_CARDS, MODEL_RULES, MODELS, VOICES, WHY_NOT_LIVE, WORKSPACES,
+    FEATURE_BLURBS, FEATURE_VALUE, FIT_GUIDE, MODEL_CARDS, MODEL_RULES, MODELS, SESSION_LIMITS, VOICES, WHY_NOT_LIVE, WORKSPACES,
 )
 from live import (
     Request, UserError, adc_available, configure_live_proxy, error_payload,
@@ -75,6 +75,7 @@ def catalog():
         'compare_api': COMPARE_API,
         'why_not_live': WHY_NOT_LIVE,
         'fit_guide': FIT_GUIDE,
+        'session_limits': SESSION_LIMITS,
         'feature_value': FEATURE_VALUE,
         'feature_blurbs': FEATURE_BLURBS,
         'api_out_of_demo': API_OUT_OF_DEMO,

@@ -18,6 +18,7 @@
 <section id="learn" hidden>
 <div class="page-title"><div class="eyebrow">LEARN BY TALKING</div><h1>先搞懂它是什么，再点按钮。</h1><p>这是一条<strong>有状态的双向 WebSocket</strong>：你可以边说边听，也可以只让它打字幕。顶栏三页不能混用。Live <strong>不是万能接口</strong>：不是 Chirp，不是 Cloud TTS，不是会议纪要，也不是双向视频通话。</p></div>
 <article class="card mandate"><strong>官方定位：Live = 1 对 1 实时会话，不是语音需求的统一入口</strong><p>对话：你说，它说（可打断，可选 JPEG 1fps）。听写：你说，它只打字幕，不接话。打字：你打字，它说——和对话同一条长连接，差别主要是输入方式。点停止才挂断。</p><p class="not-for">不要用 Live 提：一小时会、说话人分离、电话/医学 ASR、SSML 配音、要模型回传画面、离线/克隆声纹。</p></article>
+<article class="card compare-card"><h2>能撑多久：对业务的影响</h2><p class="hint">总表只在这一页。对话 / 听写 / 打字各页只写本页会碰到的情况。WebSocket 协议可以一直开着；Live 仍然大约 10 分钟关一根线——心跳解决不了。</p><div id="session-limits"></div></article>
 <div class="learn-grid">
 <article class="card"><h2>它能干嘛</h2><p>语音助手、近实时字幕、先打字再听它说。对话页可以打断、开摄像头或共享屏幕（JPEG 1fps，它只看不回传画面），也可以试会话恢复、压缩、演示函数、搜索接地和原生音频开关。</p></article>
 <article class="card"><h2>三页分别是谁</h2><p>「对话」= 原生音频 GA，麦克风进、语音出。「听写」= 3.5 Transcribe Live，只要字幕。「打字」= 同一套对话模型，文本进、语音出，长连接多轮发送。</p></article>

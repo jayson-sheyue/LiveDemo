@@ -134,16 +134,21 @@
 
 ---
 
-## 4. 会话有多长
+## 4. 能撑多久（按页看，对业务）
 
-官方会话管理页（核查 2026-09）：
+总对照表只在入门指南页。对话 / 听写 / 打字各页只写本页会碰到的情况。
 
-- WebSocket 连接大约 **10 分钟**；结束前约 60 秒会收到 `goAway`
-- 没有上下文压缩时，音频-only 大约 **15 分钟**，音视频大约 **2 分钟**
-- 可以用 session resumption 把上下文接到下一根线；本 Demo 对话/听写/打字页都可以勾选，断线后点「接着上次」
-- Transcribe Live 最长大约 **10 分钟**
+WebSocket 协议可以 24×7 开着，心跳也能防 NAT 踢空闲连接，但 **挡不住** Google 给这根 Live 连接设的关线时间。
 
-教学点几句足够。不要拿它开一小时会。
+**对话页：** 门店接待、语音助手大约 **10 分钟** 会突然没声（换线），客人要重新自我介绍，除非自动「接着上次」。不开摄像头时，窗口大约还能再撑到 **15 分钟**，所以纯语音先卡在换线上。一开摄像头或屏幕，不压缩大约 **2 分钟**，只够短导览，不够一路讲解。
+
+**打字页：** 不是「打字就能聊一整天」。单根线仍然大约 **10 分钟** 会挂。你打一句它回一句，窗口涨得比麦克风一直开着慢，官方也没有单独给打字一个分钟数——不要把对话页的 15 分钟套过来。打字时若开着摄像头/屏幕，和对话页一样，不压缩大约 **2 分钟**。
+
+**听写页：** 现场字幕大约 **10 分钟** 一切两断，不能当整场发布会的速记员。一小时会走 Speech-to-Text 批量。
+
+要一直开着：压缩和恢复都开。只开一个，另一条仍会先断。
+
+出处：[开始并管理会话](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/live-api/start-manage-session)。
 
 ---
 
@@ -184,7 +189,7 @@
 | 现象 | 打开 |
 | --- | --- |
 | 不知道 Live 是什么 | [Live API 概览](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/live-api) |
-| 10 分钟断、goAway、16/24 kHz | [开始并管理会话](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/live-api/start-manage-session) |
+| 10 分钟断、2 分钟断、打字也挂、goAway、心跳没用 | [开始并管理会话](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/live-api/start-manage-session) · 入门页「能撑多久」 |
 | 声音列表、语言表没有普通话 | [语言与声音](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/live-api/configure-language-voice) |
 | 听写模型 ID、global、85+ 语言 | [Gemini 3.5 Transcribe](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-transcribe) |
 | 登录失败 | [ADC](https://docs.cloud.google.com/docs/authentication/provide-credentials-adc) |

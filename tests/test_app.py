@@ -10,6 +10,8 @@ def test_home_and_static(client):
     assert 'data-page="talk"' in home.text and 'data-page="transcribe"' in home.text
     assert 'data-page="textturn"' in home.text
     assert 'id="compare-models"' in home.text
+    assert 'id="session-limits"' in home.text
+    assert '能撑多久' in home.text
     assert '不是万能' in home.text
     assert '1 对 1' in home.text
     css = client.get('/static/style.css')
@@ -75,6 +77,16 @@ def test_catalog_and_docs(client):
     assert catalog['api_out_of_demo'][0][1] == '业务价值'
     assert any('RAG' in row[0] for row in catalog['api_out_of_demo'])
     assert not any('Chirp' in row[0] or 'ADK' in row[0] or '双向视频' in row[0] or '出画面' in row[0] for row in catalog['api_out_of_demo'][1:])
+    assert catalog['session_limits'][0][2] == '对业务意味着什么'
+    assert any('打字页' in row[0] for row in catalog['session_limits'][1:])
+    assert any('10 分钟' in row[1] and '打字' in row[0] for row in catalog['session_limits'][1:])
+    assert talk.get('limit_impact') and '10 分钟' in talk['limit_impact']['items'][0]['impact']
+    assert textturn.get('limit_impact') and '打字' in textturn['limit_impact']['lede']
+    assert transcribe.get('limit_impact')
+    js = client.get('/static/app.js')
+    intro = js.text.split('function pageIntro')[1].split('function pageDocs')[0]
+    assert 'htmlTable(catalog.session_limits)' not in intro
+    assert 'limit_impact' in intro
     assert catalog['compare_models'][0][1] == '对话页'
     assert catalog['model_rules'][0][0] == '能力'
     for name in ('readme', 'guide', 'sources'):

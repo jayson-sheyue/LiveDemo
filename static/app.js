@@ -1,5 +1,5 @@
 'use strict';
-const GLOBAL = new Set(['guide-content','source-content','source-links','show-guide','show-readme','model-rules','compare-models','compare-methods','compare-api','compare-why','compare-fit','feature-value','api-out-of-demo','workspaces']);
+const GLOBAL = new Set(['guide-content','source-content','source-links','show-guide','show-readme','model-rules','compare-models','compare-methods','compare-api','compare-why','compare-fit','session-limits','feature-value','api-out-of-demo','workspaces']);
 let catalog, active='talk', busy=false, controller, objectUrl=null, savedConfig=null, liveSocket=null, liveTimer=null, liveSession=null, player=null;
 const primed=new Set();
 let lastResumeHandle='';
@@ -156,7 +156,9 @@ function pageIntro(spec){
   const banner=pos.official?`<div class="mandate"><strong>${escapeHtml(pos.official)}</strong>${pos.this_page?`<p>${escapeHtml(pos.this_page)}</p>`:''}${pos.not_this?`<p class="not-for">${escapeHtml(pos.not_this)}</p>`:''}</div>`:'';
   const fit=(spec.fit||[]).map(item=>`<article class="fit-item"><strong>${escapeHtml(item.title)}</strong><p>${escapeHtml(item.body)}</p></article>`).join('');
   const surface=(spec.surface||[]).map(item=>`<li>${escapeHtml(item)}</li>`).join('');
-  return `<section class="card page-intro">${banner}<div class="fit-row">${fit}</div>${spec.coverage?`<p class="hint coverage">${escapeHtml(spec.coverage)}</p>`:''}${spec.limit_note?`<p class="hint">${escapeHtml(spec.limit_note)}</p>`:''}${surface?`<div class="surface"><small>本页可试的 API 能力</small><ul>${surface}</ul></div>`:''}</section>`;
+  const impact=spec.limit_impact;
+  const impactBox=impact?`<div class="limit-impact"><strong>${escapeHtml(impact.title||'这一页能撑多久')}</strong>${impact.lede?`<p>${escapeHtml(impact.lede)}</p>`:''}${(impact.items||[]).map(item=>`<article><strong>${escapeHtml(item.when||'')}</strong><p>${escapeHtml(item.impact||'')}</p><p class="do">${escapeHtml(item.do||'')}</p></article>`).join('')}<p class="hint">三页对照总表只在入门指南。</p></div>`:'';
+  return `<section class="card page-intro">${banner}${impactBox}<div class="fit-row">${fit}</div>${spec.coverage?`<p class="hint coverage">${escapeHtml(spec.coverage)}</p>`:''}${spec.limit_note?`<p class="hint">${escapeHtml(spec.limit_note)}</p>`:''}${surface?`<div class="surface"><small>本页可试的 API 能力</small><ul>${surface}</ul></div>`:''}</section>`;
 }
 function pageDocs(spec){
   const docs=spec.docs||[];
@@ -607,7 +609,7 @@ function handleLiveEvent(data){
     if($('metrics')) $('metrics').textContent='已拿到恢复句柄。断线后可点「接着上次」。';
     showOutput();
   }
-  if(data.go_away) report('loading','服务即将断开（goAway）。大约 10 分钟的 WebSocket 限额。若已打开会话恢复，稍后可点「接着上次」。');
+  if(data.go_away) report('loading','服务即将断开（goAway）。这是单根 Live 连接大约 10 分钟的上限，不是心跳失败。若已勾选会话恢复，马上点「接着上次」换线。上下文装满是另一条限制，要靠压缩。');
   if(data.turn_complete){
     if(liveOutText) appendTurn('model','它说', liveOutText, false);
     liveOutText='';
@@ -763,6 +765,7 @@ async function init(){
     $('compare-api').innerHTML=htmlTable(catalog.compare_api);
     $('compare-why').innerHTML=htmlTable(catalog.why_not_live);
     $('compare-fit').innerHTML=htmlTable(catalog.fit_guide);
+    if($('session-limits')) $('session-limits').innerHTML=htmlTable(catalog.session_limits);
     if($('feature-value')) $('feature-value').innerHTML=htmlTable(catalog.feature_value);
     $('api-out-of-demo').innerHTML=htmlTable(catalog.api_out_of_demo);
     page('talk');
